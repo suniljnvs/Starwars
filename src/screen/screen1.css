@@ -1,0 +1,101 @@
+.image{
+    width: 150px;
+    height: 180px;
+}
+
+.characters_container{
+    margin: 25px;
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 2rem;
+}
+
+.logo_image_main{
+    margin: 15px;
+    border-radius: 12px;
+    position: absolute;
+    top: 8px;
+    left: 3%;
+}
+
+.char_container{
+    background-color: rgb(81, 80, 87);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.fav_button{
+    padding: 10px;    
+}
+
+.fav_button:active{
+    color: rgb(206, 116, 56);
+}
+
+.image_container{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-25.jpg);
+    height: 50rem;
+}
+
+.saved_list_button{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+/* ==========Media  Queries (medium devices) =============*/
+
+@media screen and (max-width: 1024px) {
+    .characters_container{
+        margin: 20px;
+        margin-top: 110px;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .main_container{
+        height: 90rem;
+        align-items: flex-end;
+        padding-right: 35px;
+    }
+    .saved_list_button{
+        position: static;
+        margin-bottom: 20px;
+    }
+}
+
+/* ==========Media  Queries (small devices) =============*/
+
+@media screen and (max-width: 600px) {
+    .characters_container{
+        margin: 15px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .main_container{
+        height: fit-content;
+        align-items: center;
+        padding-right: 0;
+        width: 400px;
+    }
+    .saved_list_button{
+        position: static;
+        margin-bottom: 20px;
+    }
+    .logo_image_main{
+        margin: 15px;
+        position: static;        
+    }
+}
